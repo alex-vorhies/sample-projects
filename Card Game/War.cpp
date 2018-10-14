@@ -1,7 +1,6 @@
 //Name: Alex Vorhies
 //Date: 3/10/16
 //Description: Simulates the card game War (requires Deck.cpp and Deck.h to work properly)
-//Proposed points: I feel I should receive 20 points
 
 #include "Deck.h" //header file required for the game to work properly
 #include <iostream> //required in order for the program to output information to the console
