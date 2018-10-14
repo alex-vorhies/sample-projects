@@ -1,7 +1,6 @@
 //Name: Alex Vorhies
 //Date: 4/11/16
 //Description: Searches a file of tweets and adds them to a list for use later (requires main.cpp, tweet.cpp, tweetlist.h, and tweetlist.cpp to work)
-//Proposed points: I feel I should receive 20 points
 
 #ifndef TWEET_H //if the header file hasn't been defined
 #define TWEET_H //define the header file
