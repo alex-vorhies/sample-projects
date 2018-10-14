@@ -1,8 +1,6 @@
 #author: Alex Vorhies
 #date: 11/10/15
 #description: The Driver class for a Pong game
-#proposed points (out of 20): I feel that because I put the required work into this project for full points,
-#I should receive 20 points
 
 #import processes required for boing.wav to work
 import subprocess
