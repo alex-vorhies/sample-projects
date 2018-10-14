@@ -1,7 +1,6 @@
 //Name: Alex Vorhies
 //Date: 4/11/16
 //Description: Searches a file of tweets and adds them to a list for use later (requires tweet.h, main.cpp, tweetlist.h, and tweetlist.cpp to work)
-//Proposed points: I feel I should receive 20 points
 
 #include "tweet.h" //include the Tweet header file
 #include <fstream> //required for the program to use files
