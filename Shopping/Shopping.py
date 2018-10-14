@@ -1,8 +1,6 @@
 #name: Alex Vorhies
 #date: September 10th, 2015
 #description: A program that simulates shopping in a store
-#proposed points (out of 20): I feel that because I have included everything that I needed in the program plus
-#the extra credit opportunity, I should receive 20 points
 
 subtotal = 0.0 #pre-defining values of variables before starting the program
 payment = 0.0
