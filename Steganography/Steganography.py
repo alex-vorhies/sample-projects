@@ -1,8 +1,6 @@
 #author: Alex Vorhies
 #date: October 6, 2015
 #description: A program that alters the Mona Lisa to display hidden messages or print it gray-scale
-#proposed points (out of 20): I feel that because I have each aspect of the program that was required,
-#I should receive 20 points
 
 def printImage(): #defining writing of each pixel to the image
     if choice != 4:
