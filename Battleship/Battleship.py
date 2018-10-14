@@ -1,8 +1,6 @@
 #author: Alex Vorhies
 #date: September 24, 2015
 #description: A computer-generated Battleship game.
-#proposed points (out of 20): I feel that because I have everything except for the two-dimension aspect
-#of the program, I should receive 18 points on this assignment.
 
 #import the random number generation
 import random
