@@ -1,7 +1,6 @@
 //Name: Alex Vorhies
 //Date: 2/10/16
 //Description: Analyzes demcaucusresults.txt for Sanders' and Clinton's best precincts
-//Proposed points: I feel that because the program is able to read in the data and process it at the right times, I should receive 20 points
 
 #include <fstream> //required in order for the program to use files
 
