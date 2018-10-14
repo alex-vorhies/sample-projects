@@ -1,7 +1,6 @@
 //Name: Alex Vorhies
 //Date: 2/17/16
 //Description: Analyzes temperature records stored in a file and outputs the high and low for each day
-//Proposed points: I feel that because I have all three functions working without any issue, I should receive 10 points.
 
 #include <fstream> //required for files to work
 
