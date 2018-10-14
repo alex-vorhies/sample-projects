@@ -2,8 +2,6 @@
 #date: October 29, 2015
 #description: A program that takes ratings on books, determines the best and worst ones, and determines
 #with whom you match best
-#proposed points (out of 20): I feel that because I have each aspect of the program working without issue
-#I should receive 20 points
 
 ratingsMatrix = [] #pre-defining lists and variables before the code runs
 books = []
