@@ -1,7 +1,6 @@
 //Name: Alex Vorhies
 //Date: 3/10/16
 //Description: Simulates the card game War (requires Deck.cpp and Deck.h to work properly)
-//Proposed points: I feel I should receive 20 points
 
 #ifndef DECH_H //if Deck_h has not been defined
 #define DECH_H //define deck.h header
