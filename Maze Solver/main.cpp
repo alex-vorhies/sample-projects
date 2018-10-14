@@ -1,7 +1,6 @@
 //Name: Alex Vorhies
 //Date: 4/27/16
 //Description: A maze solving game. Can have a human player or an AI solve the maze
-//Proposed points: I feel I should receive 19 points
 
 #include <iostream> //required for the program to output information to the console
 #include <fstream> //required for the program to use files
