@@ -1,8 +1,6 @@
 #author: Alex Vorhies
 #date: October 22, 2015
 #description: A program that analyzes movie reviews
-#proposed points (out of 20): I feel that because I have coded all of the menu choices provided,
-#I should receive 20 points
 
 choice = 0
 
