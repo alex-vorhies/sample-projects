@@ -1,7 +1,6 @@
 //Name: Alex Vorhies
 //Date: 2/29/16
 //Description: Creates a virtual set of cards, prints it out, shuffles it, then prints it out again
-//Proposed points: I feel that I should receive 10 points for this assignment
 
 #include <iostream>
 #include <ctime> //required for the program to produce different results
