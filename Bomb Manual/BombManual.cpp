@@ -9,18 +9,13 @@ using namespace std;
 
 BombManual::BombManual()
 { //. = dot; - = dash
-	morseCodeKey[".-"] = 'a'; //the code for the letter is the key to get that letter out
-	morseCodeKey["-..."] = 'b';
-	morseCodeKey["-.-."] = 'c';
+	morseCodeKey["-..."] = 'b'; //the code for the letter is the key to get that letter out
 	morseCodeKey["."] = 'e';
 	morseCodeKey["..-."] = 'f';
-	morseCodeKey["--."] = 'g';
 	morseCodeKey["...."] = 'h';
 	morseCodeKey[".."] = 'i';
-	morseCodeKey["-.-"] = 'k';
 	morseCodeKey[".-.."] = 'l';
 	morseCodeKey["--"] = 'm';
-	morseCodeKey["-."] = 'n';
 	morseCodeKey["---"] = 'o';
 	morseCodeKey[".-."] = 'r';
 	morseCodeKey["..."] = 's';
@@ -32,7 +27,7 @@ BombManual::BombManual()
 void BombManual::wire()
 {
 	short numberWire, yellowWire; //tracks the number of wires and yellow wires
-	char redWire, blueWire, blackWire, serialOdd, yellow; //tracks (y)es and (n)o values for differnt colors of wire as well as if the serial number ends in an odd number
+	char redWire, blueWire, blackWire, serialOdd, yellow; //tracks (y)es and (n)o values for different colors of wire as well as if the serial number ends in an odd number
 	cout << "How many wires are there? ";
 	cin >> numberWire; //gets the number of wires
 	cin.get(); //trashes the character at the end of an input
@@ -409,19 +404,117 @@ void BombManual::button()
 
 void BombManual::simon()
 {
+	string color, order = "";
+	short strikes;
+	bool solved = false;
+	char response;
 	if (serial) //if the serial number has a vowel
 	{
-		cout << "\t \t" << "Red flash \t Blue Flash \t Green Flash \t Yellow Flash\n";
-		cout << "No strikes \t Blue \t \t Red \t \t Yellow \t Green\n";
-		cout << "1 strike \t Yellow \t Green \t \t Blue \t \t Red\n";
-		cout << "2 strikes \t Green \t \t Red \t \t Yellow \t Blue\n";
+		while(!solved)
+		{
+			cout << "What color is flashing? ";
+			getline(cin,color);
+			transform(color.begin(),color.end(),color.begin(),::tolower);
+			cout << "How many strikes do you have? ";
+			cin >> strikes;
+			cin.get();
+			if (strikes == 0)
+			{
+				if (color == "red")
+					order += "Blue";
+				else if (color == "blue")
+					order += "Red";
+				else if (color == "green")
+					order += "Yellow";
+				else if (color == "yellow")
+					order += "Green";
+			}
+			else if (strikes == 1)
+			{
+				if (color == "red")
+					order += "Yellow";
+				else if (color == "blue")
+					order += "Green";
+				else if (color == "green")
+					order += "Blue";
+				else if (color == "yellow")
+					order += "Red";
+			}
+			else if (strikes == 2)
+			{
+				if (color == "red")
+					order += "Green";
+				else if (color == "blue")
+					order += "Red";
+				else if (color == "green")
+					order += "Yellow";
+				else if (color == "yellow")
+					order += "Blue";
+			}
+			cout << order << endl;
+			order += ", ";
+			cout << "Is it still flashing? (y/n) ";
+			cin >> response;
+			cin.get();
+			if (response == 'n')
+				solved = true;
+			else
+				solved = false;
+		}
 	}
 	else //if the serial number does not have a vowel
 	{
-		cout << "\t \t" << "Red flash \t Blue Flash \t Green Flash \t Yellow Flash\n";
-		cout << "No strikes \t Blue \t \t Yellow \t Green \t \t Red\n";
-		cout << "1 strike \t Red \t \t Blue \t \t Yellow \t Green\n";
-		cout << "2 strikes \t Yellow \t Green \t \t Blue \t \t Red\n";
+		while(!solved)
+		{
+			cout << "What color is flashing? ";
+			getline(cin,color);
+			transform(color.begin(),color.end(),color.begin(),::tolower);
+			cout << "How many strikes do you have? ";
+			cin >> strikes;
+			cin.get();
+			if (strikes == 0)
+			{
+				if (color == "red")
+					order += "Blue";
+				else if (color == "blue")
+					order += "Yellow";
+				else if (color == "green")
+					order += "Green";
+				else if (color == "yellow")
+					order += "Red";
+			}
+			else if (strikes == 1)
+			{
+				if (color == "red")
+					order += "Red";
+				else if (color == "blue")
+					order += "Blue";
+				else if (color == "green")
+					order += "Yellow";
+				else if (color == "yellow")
+					order += "Green";
+			}
+			else if (strikes == 2)
+			{
+				if (color == "red")
+					order += "Yellow";
+				else if (color == "blue")
+					order += "Green";
+				else if (color == "green")
+					order += "Blue";
+				else if (color == "yellow")
+					order += "Red";
+			}
+			cout << order << endl;
+			order += ", ";
+			cout << "Is it still flashing? (y/n) ";
+			cin >> response;
+			cin.get();
+			if (response == 'n')
+				solved = true;
+			else
+				solved = false;
+		}
 	}
 }
 
