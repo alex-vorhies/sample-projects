@@ -7,13 +7,12 @@
 
 using namespace std;
 
-class BombManual
-{
+class BombManual {
 	private:
-		short battery; //tracks the number of batteries
+		short battery = -1; //tracks the number of batteries
 		string text, color; //tracks the color of and the text on a button
 		bool serial; //tracks if the serial number contains a vowel
-		map<string,char> morseCodeKey; //adds morse code translation (not ful morse code as most letters aren't used)
+		map<string,char> morseCodeKey; //adds morse code translation (not full morse code as most letters aren't used)
 		vector<string> indicators; //tracks lit indicators on the bomb
 	public:
 		BombManual(); //constructor function
@@ -25,6 +24,7 @@ class BombManual
 		void sequence(); //wire sequences
 		void password();
 		void morseCode();
+		void complicated();
 		void changeBattery(short b) {battery = b;}; //changes the battery count to the number provided
 		void changeText(string t) {text = t;}; //changes the button text to the string provided
 		void changeColor(string c) {color = c;}; //changes the button color to the string provided
