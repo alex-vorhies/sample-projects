@@ -9,8 +9,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
 	BombManual b;
 	short modules, battery, buttonNumber = 0, simonNumber = 0;
 	string subject, color, text, addToVector, trash;
@@ -18,16 +17,14 @@ int main()
 	cout << "How many modules are on the bomb? ";
 	cin >> modules; //gets the number of modules on the bomb
 	cin.get();
-	for (short i = 0; i < modules; i++)
-	{
-		cout << "Subjects: wire, button, simon, memory, first, sequence, password, morse\n";
+	for (short i = 0; i < modules; i++) {
+		cout << "Subjects: wire, button, simon, memory, first, sequence, password, morse, complicated\n";
 		cout << "What subject do you need to refer to? ";
 		getline(cin,subject);
 		transform(subject.begin(),subject.end(),subject.begin(),::tolower);
 		if (subject == "wire")
 			b.wire(); //run the wire function in the Bomb Manual class
-		else if (subject == "button")
-		{
+		else if (subject == "button") {
 			cout << "What color is the button? "; //need the color of the button for this function
 			cin >> color;
 			transform(color.begin(),color.end(),color.begin(),::tolower);
@@ -36,8 +33,7 @@ int main()
 			cin >> text;
 			transform(text.begin(),text.end(),text.begin(),::tolower);
 			b.changeText(text);
-			if (buttonNumber == 0) //if this is the first button on this bomb
-			{
+			if (buttonNumber == 0) { //if this is the first button on this bomb
 				cout << "How many batteries are on the bomb? "; //battery number will be needed on future buttons
 				cin >> battery;
 				b.changeBattery(battery);
@@ -46,10 +42,8 @@ int main()
 				tolower(indicator);
 				if (indicator == 'n')
 					b.addIndicators("none");
-				else
-				{
-					while (addToVector != "done")
-					{
+				else {
+					while (addToVector != "done") {
 						cout << "What is one of the indicators? When finished, type \"done.\" ";
 						cin >> addToVector;
 						transform(addToVector.begin(),addToVector.end(),addToVector.begin(),::tolower);
@@ -61,10 +55,8 @@ int main()
 			b.button(); //run the button function
 			buttonNumber++; //increment buttonNumber
 		}
-		else if (subject == "simon")
-		{
-			if (simonNumber == 0) //if this is the first simon says
-			{
+		else if (subject == "simon") {
+			if (simonNumber == 0) { //if this is the first simon says
 				cout << "Does the serial number contain a vowel? (y/n) "; //this will be important on future simon says
 				cin >> serial;
 				cin.get();
@@ -87,6 +79,8 @@ int main()
 			b.password();
 		else if (subject == "morse")
 			b.morseCode();
+		else if (subject == "complicated")
+			b.complicated();
 		else //not all subjects are coded here as they are too complicated right now
 			cout << "That subject is too complicated to display. Go to your manual.\n";
 	}
